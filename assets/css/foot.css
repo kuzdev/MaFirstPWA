@@ -1,0 +1,261 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url('assets/font/Helveticaneue/Helvetica\ Neu\ Bold.ttf');
+    src: url('../font/Helveticaneue/HelveticaNeueMed.ttf')
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url('assets/font/Helveticaneue/Helvetica');
+    src: url('../font/Helveticaneue/HelveticaNeueHv.ttf')
+}
+
+
+/* .container {
+    width: 90%;
+
+} */
+
+footer li {
+    list-style-type: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Helveticaneue';
+}
+
+.footer {
+    color: #fff;
+    background-color: #1C2229;
+    padding: 4em 0;
+    padding-bottom: 7em;
+
+    display: grid;
+    grid-template-columns: 7vw 1fr 7vw;
+    grid-template-rows: auto auto;
+}
+
+.footer-container {
+    grid-column: 2 / 3;
+}
+
+.footer-container {
+    grid-column: 2 / 3;
+    display: grid;
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: 2fr 2fr 2fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo navigation secondary social""contact contact . newsletter";
+}
+
+.footer-logo {
+    grid-area: logo;
+    width: 100px
+}
+
+.footer-nav {
+    grid-area: navigation;
+    justify-self: center;
+}
+
+.footer-nav h4 {
+    color: #fff;
+}
+
+.footer-secondary-nav {
+    grid-area: secondary;
+    justify-self: center;
+}
+
+.footer-secondary-nav h4 {
+    color: #fff;
+}
+
+.social-networks {
+    grid-area: social;
+}
+
+.contact-block {
+    grid-area: contact;
+}
+
+.newsletter {
+    grid-area: newsletter;
+}
+
+.social-networks {
+    grid-area: social;
+    display: grid;
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+.social-networks h3 {
+    grid-column: 1 / -1;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.facebook {
+    justify-self: right;
+}
+
+.instagram {
+    justify-self: left;
+}
+
+.contact-block,
+.newsletter {
+    align-self: end;
+}
+
+.bottom-line {
+    display: grid;
+    grid-template-columns: 7vw 8fr 4fr 7vw;
+}
+
+.bottom-line p {
+    grid-column: 2;
+}
+
+.legal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: end;
+}
+
+.newsletter-text,
+.text-input {
+    text-align: center;
+}
+
+.text-input input {
+    border-radius: 0;
+}
+
+.text-input input:first-child {
+    height: 2rem;
+}
+
+.text-input input:last-child {
+    height: 2.25rem;
+    color: #fff;
+    border: none;
+    background-color: #f99639;
+    width: 5rem;
+    font-weight: bold;
+}
+
+.fas,
+.fab {
+    font-size: 1.5rem;
+}
+
+.newsletter-text icon,
+.newsletter-text p {
+    margin: 0 0 1.1rem;
+}
+
+.newsletter-text p {
+    line-height: 2rem;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 70%;
+}
+
+.contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+}
+
+.social-networks {
+    border-bottom: 2px solid #f99639;
+}
+
+.bottom-line {
+    background-color: #444554;
+}
+
+.bottom-line,
+.bottom-line a {
+    color: #fff;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 960px) {
+    .footer {
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    .footer-nav,
+    .footer-secondary-nav {
+        display: none;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20vh 25vh;
+        grid-template-areas: "logo social""contact newsletter";
+    }
+
+    .bottom-line {
+        display: grid;
+        grid-template-columns: 7vw 1fr 7vw;
+    }
+
+    .bottom-line p {
+        justify-self: center;
+    }
+
+    .legal {
+        grid-column: 2 / -2;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "logo""social""newsletter""contact";
+    }
+
+    .footer-logo,
+    .contact-block {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .social-networks,
+    .newsletter {
+        padding: 3rem 0;
+    }
+
+    .contact-block a,
+    .contact-block p {
+        margin: 0 auto;
+    }
+
+    .contact-block h3,
+    .social-networks h3 {
+        line-height: 3rem;
+    }
+}

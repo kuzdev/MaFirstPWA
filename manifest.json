@@ -1,0 +1,16 @@
+{
+    "name": "KuzPedia Mobile",
+    "short_name": "KUZPedia",
+    "description": "Aplikasi KUZPedia Mobile",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "ecf0f1",
+    "theme_color": "#00897B",
+    "icons": [
+        {
+            "src": "iconkuz.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
